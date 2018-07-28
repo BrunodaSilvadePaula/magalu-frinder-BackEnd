@@ -20,10 +20,12 @@ from rest_framework import routers
 
 from lojas.api.viewsets import LojaViewSet
 from produtos.api.viewsets import ProdutoViewSet
+from usuarios.api.viewsets import UsuarioViewSet
 
 router = routers.DefaultRouter()
 router.register(r'loja', LojaViewSet, base_name='Loja')
 router.register(r'produto', ProdutoViewSet, base_name='Produto')
+router.register(r'usuario', UsuarioViewSet)
 
 urlpatterns = [
     path('admin/', admin.site.urls),
