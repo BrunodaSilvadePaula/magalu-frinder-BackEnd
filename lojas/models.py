@@ -4,7 +4,7 @@ from django.db import models
 
 class Loja(models.Model):
     descricao = models.TextField()
-    cod_filial = models.IntegerField(null=True, blank=True)
+    cod_filial = models.IntegerField(null=False, blank=False)
     cep = models.CharField(max_length=10)
 
     def __str__(self):
