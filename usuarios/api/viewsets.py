@@ -1,8 +1,8 @@
-from django_filters.rest_framework import DjangoFilterBackend
 from rest_framework.viewsets import ModelViewSet
-from lojas.models import Loja
-from .serializers import LojaSerializer
+from django.contrib.auth.models import User
+from .serializers import UsuarioSerializer
 
-class LojaViewSet(ModelViewSet):
-    queryset = Loja.objects.all()
-    serializer_class = LojaSerializer
+class UsuarioViewSet(ModelViewSet):
+    queryset = User.objects.all()
+    serializer_class = UsuarioSerializer
+
