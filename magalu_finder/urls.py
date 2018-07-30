@@ -17,6 +17,7 @@ from django.contrib import admin
 from django.urls import path
 from django.conf.urls import include
 from rest_framework import routers
+from rest_framework.authtoken.views import obtain_auth_token
 
 from lojas.api.viewsets import LojaViewSet
 from produtos.api.viewsets import ProdutoViewSet
@@ -30,4 +31,5 @@ router.register(r'usuario', UsuarioViewSet)
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', include(router.urls)),
+    path('api-token-auth/', obtain_auth_token),
 ]
