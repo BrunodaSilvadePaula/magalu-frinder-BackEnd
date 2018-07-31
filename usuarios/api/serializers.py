@@ -1,5 +1,6 @@
 from rest_framework.serializers import ModelSerializer
 from django.contrib.auth.models import User
+from rest_framework.authtoken.models import Token
 
 class UsuarioSerializer(ModelSerializer):
     class Meta:
@@ -13,4 +14,5 @@ class UsuarioSerializer(ModelSerializer):
             user = User.objects.create_user(username, None, password)
             user.is_superuser = True
             user.save()
+            Token.objects.create(user=user)
         return user
