@@ -52,6 +52,7 @@ class LojaViewSet(ModelViewSet):
     def associa_produtos(self, request, pk):
         produtos = request.data['ids']
         loja = Loja.objects.get(pk=pk)
+        loja.produtos.clear()
         loja.produtos.set(produtos)
         loja.save()
         return HttpResponse('Ok')
