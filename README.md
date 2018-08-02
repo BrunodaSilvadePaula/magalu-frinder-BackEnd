@@ -73,6 +73,9 @@ default-character-set = utf8
 $ python manager.py makemigrations
 $ python manager.py migrate
 
+* Crie um super usuario
+
+$ python manager.py createsuperuser
 
 $ python manager.py runserver
 ```
