@@ -68,5 +68,11 @@ default-character-set = utf8
 
 * Acesse a raiz do projeto
 
+* Execute
+
+$ python manager.py makemigrations
+$ python manager.py migrate
+
+
 $ python manager.py runserver
 ```
