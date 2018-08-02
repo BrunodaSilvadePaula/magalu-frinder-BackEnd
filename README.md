@@ -40,13 +40,33 @@ $ python3.6 -m venv [nome da sua venv]
 
 * Abra sua venv e clone o repositorio
 
+* Inicie a sua venv
 
-* Entre no repositorio e instele as dependências
+$ source bin/activate
 
-$ 
+* Entre no diretorio instale as dependências
+
+$ pip3 install requirements-dev.txt 
 ```
 
+## Para conectar com o banco
 
+```sh
 
-install sudo apt-get install python3.6-dev libmysqlclient-dev
-pip3 install mysqlclient
+* Crie na raiz do projeto um arquivo com o nome my.cnf com o conteudo
+
+[client]
+database = [seu database]
+user = [user]
+password = [password]
+default-character-set = utf8
+```
+
+## Para executar o prodjeto
+
+```sh
+
+* Acesse a raiz do projeto
+
+$ python manager.py runserver
+```
